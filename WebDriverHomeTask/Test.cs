@@ -13,6 +13,7 @@ namespace WebDriverHomeTask.Test
             MainPage mainPage = new MainPage(driver);
             mainPage.EnterTextToSearchField("image");
             Assert.That(mainPage.GetTitle().Contains("image"));
+            Assert.That(driver.PageSource.Contains("jpeg"));
         }
     }
 }
